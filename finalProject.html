@@ -4,36 +4,73 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
     .header {
-        padding: 60px;
+        padding: 20px;
         text-align: center;
-        background: #860ac0;
+        background: #0c08c7;
         color: white;
         font-size: 30px;
     }
+
+    form {
+        margin: 20px auto;
+        max-width: 500px;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;    
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
 </style>
 <div class="header">
-    <!-- needs formatting -->
-    <h4>Jordan Campbell
-        WEB-115-0001
-    </h4>
-    <h1>Build Your Meal Plan</h1>
+    <h1 style="margin: 0; padding: 10px 0; font-size: 36px; font-weight: bold;">Build Your Meal Plan</h1>
+    <h4 style="margin: 0; padding: 5px 0; font-size: 16px;">Jordan Campbell</h4>
+    <h4 style="margin: 0; padding: 5px 0; font-size: 16px;">WEB-115-0001</h4>
 </div>
 </head>
 
 <body>
-<form id = "myForm">
+    <form id = "mealPlanForm" style="padding: 20px;">
 
-<input type = "text" id = "nameInput" value = "Enter your name" /><br>
-<input type = "text" id = "emailInput" value = "Enter your e-mail address" /><br>
-<input type = "text" id = "goalInput" value = "Enter your fitness goal" /><br>
-<input type = "text" id = "breakfastInput" value = "Enter your breakfast meal" /><br>
-<input type = "text" id = "snackOneInput" value = "Enter your first snack item" /><br>
-<input type = "text" id = "lunchInput" value = "Enter your lunch meal" /><br>
-<input type = "text" id = "dinnerInput" value = "Enter your dinner meal" /><br>
-<input type = "text" id = "snackTwoInput" value = "Enter your second snack item" /><br>
-<input type = "button" id = "myButton" value = "Create your meal plan">
-</form>
+        <label for="name">Name:</label>
+        <input type = "text" id = "name"/><br><br>
+        <label for="email">Email:</label>
+        <input type = "text" id = "email"/><br><br>
+        <label for="goal">Fitness Goal:</label>
+        <input type = "text" id = "goal"/><br><br>
+        <label for="breakfast">Breakfast:</label>
+        <input type = "text" id = "breakfast"/><br><br>
+        <label for="snackOne">First Snack:</label>
+        <input type = "text" id = "snackOne"/><br><br>
+        <label for="lunch">Lunch:</label>
+        <input type = "text" id = "lunch"/><br><br>
+        <label for="snackTwo">Second Snack:</label>
+        <input type = "text" id = "snackTwo"/><br><br>
+        <label for="dinner">Dinner:</label>
+        <input type = "text" id = "dinner"/><br><br>
+    </form>
 
+    <button style ="display: block; margin: 0 auto;" onclick="createMealPlan()">Create Your Meal Plan</button>
+
+    <script src="projectJS.js"></script>
 </body>
 </html>
